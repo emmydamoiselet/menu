@@ -1,19 +1,23 @@
 body
 {
-	font-family: Verdana;
+	font-family: courier new;
 	margin: 0px;
 	padding: 0px;
+	background-image: url(fond.jpg) ;
+	
+	background-repeat: no-repeat;
+	font-size: 25px;
 }
-nav > ul 
+nav > ul
 {
 	margin: 0px;
 	padding: 0px;
 }
-nav li 
+nav li
 {
 	list-style-type: none;
 }
-nav > ul > li 
+nav > ul > li
 {
 	float: left;
 	position: relative;
@@ -22,7 +26,7 @@ nav > ul > li
 {
 	display: none;
 }
-nav input
+nav input[type=checkbox]
 {
 	display: none;
 }
@@ -30,27 +34,26 @@ nav input
 {
 	display: none;
 }
-nav 
+nav
 {
 	width: 100%;
-	background-color: deepskyblue;
+	background-color: #424558;
 }
 nav > ul::after
 {
 	content: "";
 	display: table;
 	clear: both;
-
 }
-nav a 
+nav a
 {
 	display: inline-block;
 	text-decoration: none;
 }
-nav > ul > li > a 
+nav > ul > li > a
 {
 	padding: 20px 30px;
-	color: ghostwhite;
+	color: #FFF;
 }
 nav li:hover .submenu
 {
@@ -60,58 +63,100 @@ nav li:hover .submenu
 	left: 0px;
 	padding: 0px;
 	z-index: 100000;
-
 }
-.submenu li 
+.submenu li
 {
 	border-bottom: 1px solid #CCC;
 }
-.submenu li a 
+.submenu li a
 {
 	padding: 15px 30px;
 	font-size: 13px;
-	color: black;
-	width: 150px;
+	color: #222538;
+	width: 270px;
 }
-
-.menu-html :hover
+.menu-html:hover
 {
 	border-top: 5px solid #e44d26;
 	background-color: rgba(228, 77, 38, 0.15);
 }
-.menu-css :hover
-{	
+.menu-iframe:hover
+{
 	border-top: 5px solid #0070bb;
-	background-color: rgba(000, 112, 192, 0.15)
+	background-color: rgba(000, 112, 192, 0.15);
 }
-.menu-js :hover
+.menu-css:hover
 {
 	border-top: 5px solid #f1dc4f;
-	background-color: rgba(241, 211, 79, 0.15)
-
+	background-color: rgba(241, 211, 79, 0.15);
 }
-.menu-contact :hover
+.menu-menu:hover
 {
-	border-top: 5px solid #BBB;
-	background-color: rgba(220, 220, 220, 0.15);
+	border-top: 5px solid rgb(50, 250, 160);
+	background-color: rgba(50, 250, 160,0.15);
 }
-nav > ul > li:hover a 
+.menu-cv:hover
+{
+	border-top: 5px solid rgb(130, 190, 75);
+	background-color: rgba(130, 190, 75,0.15);
+}
+.menu-sq:hover
+{
+	border-top: 5px solid rgb(190, 130, 75);
+	background-color: rgba(190, 130, 75,0.15);
+}
+.menu-ppe:hover
+{
+	border-top: 5px solid rgb(190, 60, 190);
+	background-color: rgba(190, 60, 190,0.15);
+}
+nav > ul > li:hover a
 {
 	padding: 15px 30px 20px 30px;
 }
 .menu-html .submenu
 {
-	background-color: rgb(230, 100, 40);
+	background-color: #e66428;
+}
+.menu-iframe .submenu
+{
+	background-color: #00a0f0;
 }
 .menu-css .submenu
 {
-	background-color: rgb(000, 160, 240);
+	background-color: #fbd863;
 }
-.menu-js .submenu
+.menu-menu .submenu
 {
-	background-color: rgb(251, 216, 99);
+	background-color: rgb(50, 250, 160);
 }
-.submenu li:hover a 
+.menu-cv .submenu
+{
+	background-color: rgb(160, 220, 105);
+}
+.menu-sq .submenu
+{
+	background-color: rgb(190, 130 , 75);
+}
+.menu-ppe .submenu
+{
+	background-color: rgb(190, 60, 190);
+}
+.menu-javascript:hover
+{
+	border-top: 5px solid #339664;
+	background-color: rgba(31, 121, 109, 0.15);
+}
+.menu-javascript .submenu
+{
+	background-color: rgb(51, 150, 100);
+}
+.menu-javascript .submenu li:hover
+{
+	background-color: rgb(51, 150, 100);
+}
+
+.submenu li:hover
 {
 	color: #EEE;
 	font-weight: bold;
@@ -120,40 +165,82 @@ nav > ul > li:hover a
 {
 	background-color: rgb(210, 77, 60);
 }
-.menu-css .submenu li:hover
+.menu-iframe .submenu li:hover
 {
 	background-color: rgb(000, 115, 200);
 }
-.menu-js .submenu li:hover
+.menu-css .submenu li:hover
 {
 	background-color: rgb(200, 165, 75);
 }
-nav input:checked ~ ul 
+.menu-menu .submenu li:hover
+{
+	background-color: rgb(10, 220, 120);
+}
+.menu-cv .submenu li:hover
+{
+	background-color: rgb(130, 190, 75);
+}
+.menu-sq .submenu li:hover
+{
+	background-color: rgb(190, 130, 75);
+}
+.menu-ppe .submenu li:hover
+{
+	background-color: rgb(190, 60, 190);
+}
+nav input[type=checkbox]:checked ~ ul
 {
 	display: block;
 }
+
 @media screen and (max-width : 680px)
 {
-	.menu-mobile{
+	.menu-mobile
+	{
 		display: block;
-		color: #FFF;
+		color: #fff;
 		background-color: rgba(29, 197, 151, 0.97);
 		text-align: center;
 		padding: 12px 0;
 	}
-	nav ul{
+	nav ul
+	{
 		display: none;
 	}
-	nav ul li,nav ul li a {
+
+	nav ul
+	{
+		display: none;
+	}
+	nav ul li, nav ul li a 
+	{
 		width: 100%;
 		text-align: center;
-
+		padding-left:0px ;
 	}
-	nav ul li a,nav ul li:hover a{
+	nav ul li a, nav ul li:hover a
+	{
 		padding: 10px 0px 10px 0px;
 	}
-	nav li:hover .submenu{
+	nav li:hover .submenu
+	{
 		display: block;
 		position: static;
 	}
+}
+.montre
+{
+	border:1px solid gold;
+	color:white;
+	background-color:gold;
+
+}
+img{
+	width: 100%;
+}
+marquee{
+	width: 500px;
+	font-size: 30px;
+	font-family: Comic sans;
 }
